@@ -1,0 +1,31 @@
+{
+  "name": "geojson_lite",
+  "version": "1.0.1",
+  "description": "A lightweight library for validating, and generating GeoJSON.",
+  "main": "build/gjl.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GaborFarkas/geojson_lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GaborFarkas/geojson_lite/issues"
+  },
+  "homepage": "https://github.com/GaborFarkas/geojson_lite/README.md",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine-node spec"
+  },
+  "keywords": [
+    "geojson",
+    "random",
+    "validate",
+    "test"
+  ],
+  "author": "Gábor Farkas",
+  "license": "MIT",
+  "browser": "build/gjl.js",
+  "devDependencies": {
+    "google-closure-compiler": "^20160125.0.0",
+    "jsdoc": "^3.4.0",
+    "jasmine-node": "^1.14.5"
+  }
+}
