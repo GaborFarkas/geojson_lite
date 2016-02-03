@@ -9,7 +9,7 @@ The library is published under the MIT license. Feel free to use it, or adapt it
 ## Example
 
 ``` javascript
-<script src="http://gaborfarkas.github.io/geojson_lite/v1.0.1/js/gjl.js"></script>
+<script src="https://gaborfarkas.github.io/geojson_lite/v1.0.1/js/gjl.js"></script>
 ```
 
 ### gjl.RandomFactory
