@@ -28,5 +28,13 @@ describe('compiled gjl', function () {
 		expect(testFactory.generateGeometry).not.toBeUndefined();
 		expect(testFactory.generateFeature).not.toBeUndefined();
 		expect(testFactory.generateFeatures).not.toBeUndefined();
+		for (var i in window.gjl.geom) {
+			expect(window.gjl.geom[i].prototype.stringify).not.toBeUndefined();
+			expect(window.gjl.geom[i].prototype.isValid).not.toBeUndefined();
+		}
+		expect(window.gjl.feat.Feature.prototype.stringify).not.toBeUndefined();
+		expect(window.gjl.feat.Feature.prototype.isValid).not.toBeUndefined();
+		expect(window.gjl.feat.FeatureCollection.prototype.stringify).not.toBeUndefined();
+		expect(window.gjl.feat.FeatureCollection.prototype.isValid).not.toBeUndefined();
 	});
 });
