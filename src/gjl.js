@@ -454,6 +454,7 @@ gjl.validate.Point = function (point) {
 		code: 0
 	};
 };
+gjl.validate['Point'] = gjl.validate.Point;
 
 //Validates an array of arrays of coordinates. Can validate LinearRings (loops) for polygons.
 gjl.validate.MultiPoint = function (coords, linearRing) {
@@ -482,8 +483,10 @@ gjl.validate.MultiPoint = function (coords, linearRing) {
 	}
 	return error;
 };
+gjl.validate['MultiPoint'] = gjl.validate.MultiPoint;
 
 gjl.validate.LineString = gjl.validate.MultiPoint;
+gjl.validate['LineString'] = gjl.validate.LineString;
 
 //Validates an array of arrays of arrays of coordinates (3D).
 gjl.validate.MultiLineString = function (coords, linearRing) {
@@ -501,10 +504,12 @@ gjl.validate.MultiLineString = function (coords, linearRing) {
 	}
 	return error;
 };
+gjl.validate['MultiLineString'] = gjl.validate.MultiLineString;
 
 gjl.validate.Polygon = function (coords) {
 	return gjl.validate.MultiLineString(coords, true);
 };
+gjl.validate['Polygon'] = gjl.validate.Polygon;
 
 //Validates an array of arrays of arrays of arrays of coordinates (4D).
 gjl.validate.MultiPolygon = function (coords) {
@@ -522,6 +527,7 @@ gjl.validate.MultiPolygon = function (coords) {
 	}
 	return error;
 };
+gjl.validate['MultiPolygon'] = gjl.validate.MultiPolygon;
 
 //Validates a GeometryCollection with every geometry in it. Also validates bbox, and crs objects. Note, that this function only does type specific validation, every other steps are in gjl.Validation#validateGeometry.
 gjl.validate.GeometryCollection = function (geom) {
@@ -619,6 +625,7 @@ gjl.validate.FeatureCollection = function (feat) {
 	}
 	return error;
 };
+gjl.validate['FeatureCollection'] = gjl.validate.FeatureCollection;
 
 //Validates a GeoJSON Feature object.
 gjl.validate.Feature = function (feat) {
@@ -659,6 +666,7 @@ gjl.validate.Feature = function (feat) {
 	}
 	return error;
 };
+gjl.validate['Feature'] = gjl.validate.Feature;
 
 //Validates a properties object. It must be a plain object with primitive values. Futhermore, undefined, and ES6 primitives are considered invalid.
 gjl.validate.Properties = function (props) {
