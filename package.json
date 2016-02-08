@@ -1,6 +1,6 @@
 {
   "name": "geojson_lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight library for validating, and generating GeoJSON.",
   "main": "build/gjl.js",
   "repository": {
