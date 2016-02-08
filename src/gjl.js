@@ -35,6 +35,7 @@ gjl['validateGeoJSON'] = gjl.validateGeoJSON;
  * @constructor
  */
 gjl.Object = function () {};
+gjl.inherits(Object, gjl.Object);
 
 /**
  * Converts the GeoJSON object to string.
